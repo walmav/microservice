@@ -10,3 +10,4 @@ pipeline:
    publish:
       image: plugins/docker
       repo: mavwali/poc
+      secrets: [ docker_username, docker_password ]
