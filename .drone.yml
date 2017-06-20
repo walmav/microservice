@@ -10,7 +10,4 @@ pipeline:
    docker:
       image: plugins/docker
       repo: mavwali/poc
-      commands:
-        - echo $DOCKER_USERNAME
-        - echo $DOCKER_PASSWORD
       secrets: [ docker_username, docker_password ]
