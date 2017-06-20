@@ -1,4 +1,4 @@
-package microservice
+package ms
 
 import (
 	"context"
@@ -24,5 +24,5 @@ type getIdRequest struct {
 }
 
 type getIdResponse struct {
-	S   string `json:"s"`
+	S string `json:"s"`
 }

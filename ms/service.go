@@ -1,4 +1,4 @@
-package microservice
+package ms
 
 import "strings"
 

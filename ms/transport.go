@@ -1,13 +1,10 @@
-package microservice
-
+package ms
 
 import (
 	"context"
 	"encoding/json"
 	"net/http"
-
 )
-
 
 func DecodeGetIdEndpointRequest(_ context.Context, r *http.Request) (interface{}, error) {
 	var request getIdRequest

@@ -1,20 +1,20 @@
 package main
 
-import(
+import (
 	httptransport "github.com/go-kit/kit/transport/http"
+	"github.com/walmav/microservice/ms"
 	"log"
 	"net/http"
-	"github.com/walmav/microservice/microservice"
-
 )
+
 func main() {
-svc := microservice.NodeImpl{}
+	svc := ms.NodeImpl{}
 
-GetIdHandler := httptransport.NewServer(
-	microservice.MakeGetIdEndpoint(svc),
-	microservice.DecodeGetIdEndpointRequest,
-	microservice.EncodeResponse,
-)
+	GetIdHandler := httptransport.NewServer(
+		ms.MakeGetIdEndpoint(svc),
+		ms.DecodeGetIdEndpointRequest,
+		ms.EncodeResponse,
+	)
 	http.Handle("/getId", GetIdHandler)
 	log.Print(http.ListenAndServe(":8080", nil))
 
