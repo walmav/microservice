@@ -1,11 +1,14 @@
 workspace:
   base: /go
-  path: src/github.com/walmav
+  path: src/github.com/walmav/microservice
 
 pipeline:
-  build:
-    image: golang
-    commands:
+  deps:
+    image:golang:latest
+   commands:
       - go get
-      - go build
       - go test
+  build:
+    image: node:latest
+    commands:
+      - go build
