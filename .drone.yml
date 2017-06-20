@@ -7,10 +7,9 @@ pipeline:
      commands:
        - go get
        - go build
+       - echo $DOCKER_USERNAME
+       - echo $DOCKER_PASSWORD	
    publish:
       image: plugins/docker
       repo: mavwali/poc
-      commands:
-        - echo $DOCKER_USERNAME
-        - echo $DOCKER_PASSWORD	
       secrets: [ docker_username, docker_password ]
