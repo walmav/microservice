@@ -1,7 +1,3 @@
-workspace:
-  base: /go
-  path: src/github.com/walmav/microservice
-
 pipeline:
    build:
      image: golang:latest
