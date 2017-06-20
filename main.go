@@ -17,5 +17,4 @@ func main() {
 	)
 	http.Handle("/getId", GetIdHandler)
 	log.Print(http.ListenAndServe(":8080", nil))
-
 }
