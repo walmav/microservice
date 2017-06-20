@@ -1,6 +1,6 @@
 workspace:
   base: /go
-  path: src/github.com/walmav/microservice
+  path: src/github.com/walmav
 
 pipeline:
   build:
