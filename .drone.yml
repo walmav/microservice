@@ -7,3 +7,6 @@ pipeline:
      commands:
        - go get
        - go build
+   publish:
+      image: plugins/docker
+      repo: mavwali/poc
