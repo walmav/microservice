@@ -10,6 +10,7 @@ pipeline:
        - go build
    docker:
       context: /go/src/github.com/walmav/microservice/skeleton
+      dockerfile: /go/src/github.com/walmav/microservice/skeleton/Dockerfile
       image: plugins/docker
       repo: mavwali/poc
       secrets: [ docker_username, docker_password ]
@@ -22,6 +23,7 @@ pipeline:
        - go build
    docker:
       context: /go/src/github.com/walmav/microservice/register
+      dockerfile: /go/src/github.com/walmav/microservice/register/Dockerfile
       image: plugins/docker
       repo: mavwali/poc
       secrets: [ docker_username, docker_password ]
