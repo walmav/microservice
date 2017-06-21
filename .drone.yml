@@ -1,0 +1,25 @@
+workspace:
+   base: /go
+   path: src/github.com/walmav/microservice
+pipeline:
+   build:
+     image: golang:latest
+     commands:
+       - cd skeleton
+       - go get
+       - go build
+     docker:
+        image: plugins/docker
+        repo: mavwali/poc
+        secrets: [ docker_username, docker_password ]
+
+   build:
+     image: golang:latest
+     commands:
+       - cd register
+       - go get
+       - go build
+     docker:
+        image: plugins/docker
+        repo: mavwali/poc
+        secrets: [ docker_username, docker_password ]
