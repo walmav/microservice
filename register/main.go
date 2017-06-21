@@ -2,7 +2,7 @@ package main
 
 import (
 	httptransport "github.com/go-kit/kit/transport/http"
-	"github.com/walmav/microservice/registration/ms"
+	"github.com/walmav/microservice/register/ms"
 	"log"
 	"net/http"
 
