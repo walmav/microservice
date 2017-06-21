@@ -9,7 +9,7 @@ pipeline:
        - go get
        - go build
    docker:
-      context: ./skeleton
+      dockerfile: ./skeleton/Dockerfile
       image: plugins/docker
       repo: mavwali/poc
       secrets: [ docker_username, docker_password ]
@@ -21,7 +21,7 @@ pipeline:
        - go get
        - go build
    docker:
-      context: ./register
+      dockerfile: ./register/Dockerfile
       image: plugins/docker
       repo: mavwali/poc
       secrets: [ docker_username, docker_password ]
