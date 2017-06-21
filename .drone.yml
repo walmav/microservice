@@ -9,7 +9,7 @@ pipeline:
        - go get
        - go build
    docker:
-      context: $(PWD)/skeleton
+      context: /go/src/github.com/walmav/microservice/skeleton
       image: plugins/docker
       repo: mavwali/poc
       secrets: [ docker_username, docker_password ]
@@ -21,7 +21,7 @@ pipeline:
        - go get
        - go build
    docker:
-      context: $(PWD)
+      context: /go/src/github.com/walmav/microservice/register
       image: plugins/docker
       repo: mavwali/poc
       secrets: [ docker_username, docker_password ]
