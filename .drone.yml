@@ -8,18 +8,20 @@ pipeline:
        - cd skeleton
        - go get
        - go build
-     docker:
-        image: plugins/docker
-        repo: mavwali/poc
-        secrets: [ docker_username, docker_password ]
+   docker:
+      context: ./skeleton
+      image: plugins/docker
+      repo: mavwali/poc
+      secrets: [ docker_username, docker_password ]
 
    build:
      image: golang:latest
      commands:
-       - cd registers
+       - cd register
        - go get
        - go build
-     docker:
-        image: plugins/docker
-        repo: mavwali/poc
-        secrets: [ docker_username, docker_password ]
+   docker:
+      context: ./register
+      image: plugins/docker
+      repo: mavwali/poc
+      secrets: [ docker_username, docker_password ]
