@@ -19,3 +19,4 @@ func main() {
 	http.Handle("/register", GetIdHandler)
 	log.Print(http.ListenAndServe(":8080", nil))
 }
+
